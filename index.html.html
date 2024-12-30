@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>index.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #d5b778;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+index.html</font>
+</center></td></tr></table>
+<pre><span class="s0">{% extends 'base.html' %}</span>
+
+<span class="s0">{% block container %}</span>
+<span class="s1">&lt;main&gt;</span>
+    <span class="s1">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;mainLeft&quot;</span><span class="s1">&gt;</span>
+        <span class="s4">&lt;!-- Insert some welcome text here --&gt;</span>
+        <span class="s1">&lt;h1 </span><span class="s2">class</span><span class="s3">=&quot;welcomeText&quot;</span><span class="s1">&gt;</span><span class="s0">Welcome to the Bookstore!</span><span class="s1">&lt;/h1&gt;</span>
+        <span class="s1">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;welcomeText&quot;</span><span class="s1">&gt;</span><span class="s0">Are you ready to immerse yourself in a fictional wonderland?</span><span class="s1">&lt;/p&gt;</span>
+        <span class="s1">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;welcomeText&quot;</span><span class="s1">&gt;</span><span class="s0">Do you want to learn about the lives of successful people?</span><span class="s1">&lt;/p&gt;</span>
+        <span class="s1">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;welcomeText&quot;</span><span class="s1">&gt;</span><span class="s0">If you want to pick a new subject and dive into the mysteries of it</span><span class="s1">&lt;/p&gt;</span>
+        <span class="s1">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;welcomeText&quot;</span><span class="s1">&gt;</span><span class="s0">Or you just want a delicious receipe for a week night dinner</span><span class="s1">&lt;/p&gt;</span>
+        <span class="s1">&lt;p </span><span class="s2">class </span><span class="s3">= &quot;welcomeText&gt;&quot;</span><span class="s1">&gt; </span><span class="s0">Then you've come to the right place!</span><span class="s1">&lt;/p&gt;</span>
+    <span class="s1">&lt;/div&gt;</span>
+    <span class="s1">&lt;div </span><span class="s2">id</span><span class="s3">='mainRight'</span><span class="s1">&gt;</span>
+        <span class="s1">&lt;h1&gt;</span><span class="s0">Shop by category:</span><span class="s1">&lt;/h1&gt;</span>
+        <span class="s1">&lt;div </span><span class="s2">id</span><span class="s3">='categorySelections'</span><span class="s1">&gt;</span>
+            <span class="s4">&lt;!-- This for loop assumes that you are passing a list of category rows, retrieved from the database --&gt;</span>
+            <span class="s0">{% for category in categories %}</span>
+                <span class="s1">&lt;div </span><span class="s2">class</span><span class="s3">='category'</span><span class="s1">&gt;</span>
+                    <span class="s4">&lt;!-- Insert a p element that contains a link with the categoryid as a GET parameter 
+                    The category name should be what is displayed 
+                    The general format should be 
+                    &lt;p&gt;&lt;a href=&quot;url with category Id parameter&quot;&gt;category name&lt;/a&gt;&lt;/p&gt; --&gt;</span>
+
+                    <span class="s4">&lt;!-- Insert an a element that contains a link with the categoryid as a GET parameter 
+                    It should display an img element that corresponds to the category.  The image file should be stored in the static folder. 
+                    The general format should be  &lt;p&gt;&lt;a href=&quot;{{url_for('category',categories=category[0])}}&quot;&gt;{{category[1]}}&lt;/a&gt;&lt;/p&gt; 
+                     {% for category in categories %}{%endfor%} 
+                    &lt;a href=&quot;url with category Id parameter&quot;&gt;&lt;img = &quot;image filename&quot; alt = &quot;image name&quot;&gt;&lt;/a&gt; --&gt;</span>
+
+
+
+                    <span class="s1">&lt;p&gt;&lt;a </span><span class="s2">href</span><span class="s3">=&quot;{{ url_for('category', categoryId=category[0]) }}&quot;</span><span class="s1">&gt;</span><span class="s0">{{ category[1] }}</span><span class="s1">&lt;/a&gt;&lt;/p&gt;</span>
+
+                     <span class="s1">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;{{url_for ('category',categories=category[0])}}&quot;</span><span class="s1">&gt;</span>
+
+
+                    <span class="s1">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;{{ url_for('category', categoryId=category[0]) }}&quot;</span><span class="s1">&gt;</span>
+                    <span class="s1">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;static/images/categories/{{category[1]}}.jpg&quot; </span><span class="s2">alt</span><span class="s3">=&quot;image name&quot;</span><span class="s1">&gt;</span>
+                <span class="s1">&lt;/div&gt;</span>
+            <span class="s0">{%endfor%}</span>
+
+        <span class="s1">&lt;/div&gt;</span>
+    <span class="s1">&lt;/div&gt;</span>
+<span class="s1">&lt;/main&gt;</span>
+<span class="s0">{% endblock %}</span></pre>
+</body>
+</html>

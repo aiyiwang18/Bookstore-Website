@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>base.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+.s5 { color: #56a8f5;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+base.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html&gt;</span>
+  <span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">Bookstore</span><span class="s0">&lt;/title&gt;</span>
+    <span class="s0">&lt;link </span><span class="s2">rel</span><span class="s3">=&quot;stylesheet&quot;</span>
+      <span class="s2">href</span><span class="s3">=&quot;{{ url_for('static', filename='css/main.css') }}&quot;</span>
+    <span class="s0">/&gt;</span>
+    <span class="s0">&lt;link </span><span class="s2">rel</span><span class="s3">=&quot;shortcut icon&quot; </span><span class="s2">href</span><span class="s3">=&quot;data:image/x-icon;,&quot; </span><span class="s2">type</span><span class="s3">=&quot;image/x-icon&quot;</span><span class="s0">&gt;</span>
+  <span class="s0">&lt;/head&gt;</span>
+  <span class="s0">&lt;body&gt;</span>
+    <span class="s0">&lt;header&gt;</span>
+      <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;leftHeader&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;{{ url_for('home')}}&quot;</span><span class="s0">&gt;</span>
+          <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;static/images/misc/bookstore.jpg&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Book Store logo&quot;</span><span class="s0">&gt;</span>
+
+        <span class="s0">&lt;/a&gt;</span>
+      <span class="s0">&lt;/div&gt;</span>
+      <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;midHeader&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;form </span><span class="s2">id</span><span class="s3">='searchBoxForm' </span><span class="s2">action</span><span class="s3">=&quot;#&quot; </span><span class="s2">method</span><span class="s3">=&quot;post&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;input </span><span class="s2">id</span><span class="s3">='searchBox' </span><span class="s2">type</span><span class="s3">='text' </span><span class="s2">placeholder</span><span class="s3">='Book Title Search' </span><span class="s2">name</span><span class="s3">=&quot;search&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;input </span><span class="s2">id</span><span class="s3">=&quot;searchIcon&quot; </span><span class="s2">type</span><span class="s3">=&quot;image&quot; </span><span class="s2">src</span><span class="s3">=&quot;static/images/misc/search-icon.png&quot; </span><span class="s2">alt</span><span class="s3">=&quot;search icon&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;/form&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;dropdown&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;p </span><span class="s2">class</span><span class="s3">=&quot;dropdownSelect&quot;</span><span class="s0">&gt;</span><span class="s1">Select Category</span><span class="s0">&lt;/p&gt;</span>
+            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;dropdownContent&quot;</span><span class="s0">&gt;</span>
+               <span class="s4">&lt;!-- This for loop assumes that you are passing in a list of category rows, retrieved from the database --&gt;</span>
+               <span class="s1">{% for category in categories %}</span>
+                   <span class="s4">&lt;!-- Insert a p element that contains a link with the categoryid as a GET parameter 
+                   The category name should be what is displayed 
+                   The general format should be 
+                   &lt;p&gt;&lt;a href=&quot;url with category Id parameter&quot;&gt;category name&lt;/a&gt;&lt;/p&gt;          --&gt;</span>
+                   <span class="s0">&lt;p&gt;&lt;a </span><span class="s2">href</span><span class="s3">=&quot;{{ url_for('category', categoryId=category[0]) }}&quot;</span><span class="s0">&gt;</span><span class="s1">{{ category[1] }}</span><span class="s0">&lt;/a&gt;&lt;/p&gt;</span>
+              <span class="s1">{%endfor%}</span>
+            <span class="s0">&lt;/div&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+      <span class="s0">&lt;/div&gt;</span>
+      <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;rightHeader&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;cartIcon&quot;</span><span class="s0">&gt;&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;img </span><span class="s2">src</span><span class="s3">=&quot;static/images/misc/cart-icon.jpg&quot; </span><span class="s2">alt</span><span class="s3">=&quot;shopping cart icon&quot;</span><span class="s0">&gt;&lt;/a&gt;</span>
+        <span class="s0">&lt;/div&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">='cartCount'</span><span class="s0">&gt;</span><span class="s1">1 item</span><span class="s0">&lt;/div&gt;</span>
+        <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">='loginButton'</span><span class="s0">&gt;&lt;a </span><span class="s2">href</span><span class="s3">='#'</span><span class="s0">&gt;</span><span class="s1">login</span><span class="s0">&lt;/a&gt;&lt;/div&gt;</span>
+
+      <span class="s0">&lt;/div&gt;</span>
+  <span class="s0">&lt;/header&gt;</span>
+    <span class="s0">&lt;main&gt;</span><span class="s1">{% block container %} {% endblock %}</span><span class="s0">&lt;/main&gt;</span>
+  <span class="s0">&lt;footer&gt;</span>
+    <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;footerLeft&quot;</span><span class="s0">&gt;</span>
+      <span class="s1">bookstore</span>
+      <span class="s0">&lt;p&gt;</span><span class="s5">&amp;copy; </span><span class="s0">&lt;/p&gt;</span>
+        <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#&quot;</span><span class="s0">&gt;</span><span class="s1">Contact Us</span><span class="s0">&lt;/a&gt;</span>
+        <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#&quot;</span><span class="s0">&gt;</span><span class="s1">Directions</span><span class="s0">&lt;/a&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;footerRight&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#&quot;</span><span class="s0">&gt;&lt;img </span><span class="s2">src </span><span class="s3">=&quot;static/images/misc/facebook-icon.jpg&quot; </span><span class="s2">alt</span><span class="s3">=&quot;Facebook&quot;</span><span class="s0">&gt;&lt;/a&gt;</span>
+        <span class="s0">&lt;a </span><span class="s2">href</span><span class="s3">=&quot;#&quot;</span><span class="s0">&gt;&lt;img </span><span class="s2">src </span><span class="s3">=&quot;static/images/misc/twitter-icon.jpg&quot; </span><span class="s2">alt </span><span class="s3">=&quot;Twitter&quot;</span><span class="s0">&gt;&lt;/a&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+  <span class="s0">&lt;/footer&gt;</span>
+  <span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>

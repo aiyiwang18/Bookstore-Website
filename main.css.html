@@ -1,0 +1,329 @@
+<html>
+<head>
+<title>main.css</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.css</font>
+</center></td></tr></table>
+<pre><span class="s0">/* Styles used on multiple pages */</span>
+
+<span class="s1">body {</span>
+    <span class="s1">max-width: </span><span class="s2">1160</span><span class="s1">px;</span>
+    <span class="s1">font: </span><span class="s2">1</span><span class="s1">em normal Arial, sans-serif;</span>
+    <span class="s1">color: #</span><span class="s2">111111</span><span class="s1">;</span>
+<span class="s1">}</span>
+<span class="s0">/* rules for the header */</span>
+<span class="s1">header {</span>
+    <span class="s1">display: flex;</span>
+    <span class="s1">justify-content: space-between;</span>
+    <span class="s1">align-items: flex-start;</span>
+    <span class="s1">margin-left: </span><span class="s2">10</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* rules for the center header */</span>
+<span class="s1">#searchBoxForm {</span>
+    <span class="s1">margin-top: </span><span class="s2">30</span><span class="s1">px;</span>
+    <span class="s1">display: flex;</span>
+<span class="s1">}</span>
+<span class="s1">#searchBox {</span>
+    <span class="s1">height: </span><span class="s2">20</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+
+<span class="s1">.dropdown {</span>
+    <span class="s1">position: relative;</span>
+    <span class="s1">display: inline-block;</span>
+    <span class="s1">margin-top: </span><span class="s2">30</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">.dropdownSelect {</span>
+    <span class="s1">width: </span><span class="s2">189</span><span class="s1">px;</span>
+    <span class="s1">padding: </span><span class="s2">5</span><span class="s1">px;</span>
+    <span class="s1">background-color: #dd1d5e;</span>
+    <span class="s1">color: white;</span>
+    <span class="s1">text-align: center;</span>
+    <span class="s1">display: block;</span>
+    <span class="s1">border-radius: </span><span class="s2">5</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">.dropdownContent {</span>
+    <span class="s1">display: none;</span>
+    <span class="s1">position: absolute;</span>
+    <span class="s1">min-width: </span><span class="s2">200</span><span class="s1">px;</span>
+    <span class="s1">padding-top: </span><span class="s2">5</span><span class="s1">px;</span>
+    <span class="s1">z-index: </span><span class="s2">1</span><span class="s1">;</span>
+    <span class="s1">border-radius: </span><span class="s2">5</span><span class="s1">px;</span>
+    <span class="s1">background-color: #dd1d5e;</span>
+    <span class="s1">text-align: center;</span>
+<span class="s1">}</span>
+
+<span class="s1">.dropdown:hover .dropdownContent {</span>
+    <span class="s1">display: block;</span>
+<span class="s1">}</span>
+
+<span class="s1">.dropdownContent a {</span>
+    <span class="s1">color: white;</span>
+    <span class="s1">text-decoration: none;</span>
+<span class="s1">}</span>
+
+<span class="s1">.dropdownContent a:hover {</span>
+    <span class="s1">color: #</span><span class="s2">00</span><span class="s1">aacc;</span>
+    <span class="s1">text-decoration: none;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* rules for the right header */</span>
+
+<span class="s1">#rightHeader {</span>
+    <span class="s1">display: flex;</span>
+    <span class="s1">margin-top: </span><span class="s2">40</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">#cartCount{</span>
+    <span class="s1">width: </span><span class="s2">150</span><span class="s1">px;</span>
+    <span class="s1">margin: </span><span class="s2">8</span><span class="s1">px </span><span class="s2">0 0 10</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">.loginButton {</span>
+    <span class="s1">background-color: #dd1d5e;</span>
+    <span class="s1">width: </span><span class="s2">50</span><span class="s1">px;</span>
+    <span class="s1">height: </span><span class="s2">30</span><span class="s1">px;</span>
+    <span class="s1">margin: </span><span class="s2">4</span><span class="s1">px auto </span><span class="s2">0 </span><span class="s1">auto;</span>
+    <span class="s1">text-align: center;</span>
+    <span class="s1">line-height: </span><span class="s2">30</span><span class="s1">px;</span>
+    <span class="s1">border-radius: </span><span class="s2">8</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">.loginButton a{</span>
+    <span class="s1">color: white;</span>
+    <span class="s1">text-decoration: none;</span>
+<span class="s1">}</span>
+<span class="s1">.loginButton a:hover {</span>
+    <span class="s1">color: #</span><span class="s2">00</span><span class="s1">aacc;</span>
+    <span class="s1">text-decoration: none;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* rules for the footer */</span>
+
+<span class="s1">footer {</span>
+    <span class="s1">display: flex;</span>
+    <span class="s1">justify-content: space-between;</span>
+    <span class="s1">border: </span><span class="s2">1</span><span class="s1">px solid black;</span>
+    <span class="s1">margin-left: </span><span class="s2">10</span><span class="s1">px;</span>
+    <span class="s1">padding: </span><span class="s2">15</span><span class="s1">px </span><span class="s2">0</span><span class="s1">;</span>
+    <span class="s1">font-size: </span><span class="s2">0</span><span class="s1">.</span><span class="s2">8</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">#footerLeft {</span>
+    <span class="s1">display: flex;</span>
+    <span class="s1">justify-content: space-between;</span>
+    <span class="s1">margin: </span><span class="s2">5</span><span class="s1">px </span><span class="s2">0 0 10</span><span class="s1">px;</span>
+    <span class="s1">width: </span><span class="s2">300</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">#footerLeft a{</span>
+    <span class="s1">padding-top: </span><span class="s2">12</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">#footerRight {</span>
+    <span class="s1">display: flex;</span>
+    <span class="s1">justify-content: space-between;</span>
+    <span class="s1">margin-right: </span><span class="s2">50</span><span class="s1">px;</span>
+    <span class="s1">width: </span><span class="s2">80</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s1">#notFoundMessage {</span>
+    <span class="s1">color: red;</span>
+<span class="s1">}</span>
+
+<span class="s1">.commandButton {</span>
+    <span class="s1">height: </span><span class="s2">30</span><span class="s1">px;</span>
+    <span class="s1">width: </span><span class="s2">150</span><span class="s1">px;</span>
+    <span class="s1">border-radius: </span><span class="s2">8</span><span class="s1">px;</span>
+    <span class="s1">margin: </span><span class="s2">20</span><span class="s1">px;</span>
+    <span class="s1">text-align: center;</span>
+    <span class="s1">line-height: </span><span class="s2">30</span><span class="s1">px;</span>
+    <span class="s1">background-color: #dd1d5e;</span>
+    <span class="s1">font-size: smaller;</span>
+    <span class="s1">color: white;</span>
+    <span class="s1">text-decoration: none;</span>
+    <span class="s1">display: block;</span>
+<span class="s1">}</span>
+
+
+<span class="s1">.submitButton {</span>
+    <span class="s1">height: </span><span class="s2">18</span><span class="s1">px;</span>
+    <span class="s1">border-radius: </span><span class="s2">8</span><span class="s1">px;</span>
+    <span class="s1">border: none;</span>
+    <span class="s1">margin: </span><span class="s2">6</span><span class="s1">px </span><span class="s2">0 0 4</span><span class="s1">px;</span>
+    <span class="s1">text-align: center;</span>
+    <span class="s1">background-color: #dd1d5e;</span>
+    <span class="s1">color: white;</span>
+    <span class="s1">font-size: </span><span class="s2">0</span><span class="s1">.</span><span class="s2">875</span><span class="s1">em;</span>
+    <span class="s1">text-decoration: none;</span>
+<span class="s1">}</span>
+
+<span class="s1">main {</span>
+    <span class="s1">display: flex;</span>
+    <span class="s1">margin: </span><span class="s2">5</span><span class="s1">px </span><span class="s2">0 0 10</span><span class="s1">px;</span>
+    <span class="s1">border-top: </span><span class="s2">1</span><span class="s1">px solid black;</span>
+    <span class="s1">border-left: </span><span class="s2">1</span><span class="s1">px solid black;</span>
+    <span class="s1">border-right: </span><span class="s2">1</span><span class="s1">px solid black;</span>
+<span class="s1">}</span>
+
+<span class="s1">h1{</span>
+    <span class="s1">font-size: </span><span class="s2">1</span><span class="s1">.</span><span class="s2">6</span><span class="s1">em;</span>
+    <span class="s1">font-weight: </span><span class="s2">700</span><span class="s1">;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Styles only used on the index page */</span>
+<span class="s0">/* Styles used on the left hand Welcome text section */</span>
+<span class="s1">#mainLeft {</span>
+    <span class="s1">width: </span><span class="s2">550</span><span class="s1">px;</span>
+    <span class="s1">padding: </span><span class="s2">20</span><span class="s1">px </span><span class="s2">0</span><span class="s1">;</span>
+    <span class="s1">display: flex;</span>
+    <span class="s1">flex-direction: column;</span>
+    <span class="s1">justify-content: space-between;</span>
+    <span class="s1">align-items: center;</span>
+    <span class="s1">text-align: center;</span>
+<span class="s1">}</span>
+
+<span class="s1">#mainLeft p{</span>
+    <span class="s1">font-size: </span><span class="s2">120</span><span class="s1">%;</span>
+<span class="s1">}</span>
+
+<span class="s1">.welcomeText {</span>
+    <span class="s1">max-width: </span><span class="s2">400</span><span class="s1">px;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* Styles used on the right hand Category section */</span>
+<span class="s1">#mainRight {</span>
+    <span class="s1">max-width: </span><span class="s2">600</span><span class="s1">px;</span>
+    <span class="s1">border-left: </span><span class="s2">1</span><span class="s1">px solid black;</span>
+    <span class="s1">padding: </span><span class="s2">20</span><span class="s1">px </span><span class="s2">0</span><span class="s1">;</span>
+    <span class="s1">background-color: #fff9fc;</span>
+    <span class="s1">text-align: center;</span>
+<span class="s1">}</span>
+
+<span class="s1">#categorySelections {</span>
+    <span class="s1">display: flex;</span>
+    <span class="s1">flex-wrap: wrap;</span>
+<span class="s1">}</span>
+
+<span class="s1">.category {</span>
+    <span class="s1">width: </span><span class="s2">299</span><span class="s1">px;</span>
+    <span class="s1">margin-top: </span><span class="s2">20</span><span class="s1">px;</span>
+    <span class="s1">text-align: center;</span>
+    <span class="s1">line-height: </span><span class="s2">40</span><span class="s1">px;</span>
+    <span class="s1">color: #dd1d5e;</span>
+    <span class="s1">font-weight: bold;</span>
+<span class="s1">}</span>
+
+<span class="s1">.category a{</span>
+    <span class="s1">text-decoration: none;</span>
+<span class="s1">}</span>
+
+
+<span class="s0">/* Styles used on the category page */</span>
+<span class="s0">/* Styles used for the left hand navigation section */</span>
+
+<span class="s1">#catLeft {</span>
+    <span class="s1">width: </span><span class="s2">500</span><span class="s1">px;</span>
+    <span class="s1">border-right: </span><span class="s2">1</span><span class="s1">px solid black;</span>
+    <span class="s1">display: flex;</span>
+    <span class="s1">color: white;</span>
+    <span class="s1">flex-direction: column;</span>
+    <span class="s1">align-items: center;</span>
+    <span class="s1">justify-content: center;</span>
+<span class="s1">}</span>
+
+<span class="s1">.notSelectedCategory {</span>
+    <span class="s1">height: </span><span class="s2">30</span><span class="s1">px;</span>
+    <span class="s1">width: </span><span class="s2">150</span><span class="s1">px;</span>
+    <span class="s1">border-radius: </span><span class="s2">8</span><span class="s1">px;</span>
+    <span class="s1">margin: </span><span class="s2">20</span><span class="s1">px;</span>
+    <span class="s1">color: white;</span>
+    <span class="s1">text-align: center;</span>
+    <span class="s1">line-height: </span><span class="s2">30</span><span class="s1">px;</span>
+    <span class="s1">background-color: #dd1d5e;</span>
+<span class="s1">}</span>
+
+<span class="s1">.notSelectedCategory a{</span>
+
+    <span class="s1">color: white;</span>
+    <span class="s1">font-size: smaller;</span>
+    <span class="s1">text-decoration: none;</span>
+<span class="s1">}</span>
+
+<span class="s1">.selectedCategory {</span>
+    <span class="s1">height: </span><span class="s2">30</span><span class="s1">px;</span>
+    <span class="s1">width: </span><span class="s2">150</span><span class="s1">px;</span>
+    <span class="s1">border: </span><span class="s2">1</span><span class="s1">px solid #dd1d5e;</span>
+    <span class="s1">border-radius: </span><span class="s2">8</span><span class="s1">px;</span>
+    <span class="s1">margin: </span><span class="s2">20</span><span class="s1">px;</span>
+    <span class="s1">text-align: center;</span>
+    <span class="s1">line-height: </span><span class="s2">30</span><span class="s1">px;</span>
+    <span class="s1">color: #dd1d5e;</span>
+    <span class="s1">font-size: smaller;</span>
+<span class="s1">}</span>
+
+<span class="s0">/* styles for the righthand section that shows all the books */</span>
+
+<span class="s1">#catRight {</span>
+    <span class="s1">padding: </span><span class="s2">20</span><span class="s1">px </span><span class="s2">0 20</span><span class="s1">px </span><span class="s2">30</span><span class="s1">px;</span>
+    <span class="s1">box-shadow: inset </span><span class="s2">0 0 0 20</span><span class="s1">px #fff9fc;</span>
+    <span class="s1">display: flex;</span>
+    <span class="s1">flex-wrap: wrap;</span>
+    <span class="s1">background-color: #fff9fc;</span>
+<span class="s1">}</span>
+
+<span class="s1">.book {</span>
+    <span class="s1">width: </span><span class="s2">350</span><span class="s1">px;</span>
+    <span class="s1">margin: </span><span class="s2">30</span><span class="s1">px;</span>
+    <span class="s1">display: flex;</span>
+    <span class="s1">background-color: white;</span>
+<span class="s1">}</span>
+
+<span class="s1">.bookDetailBox {</span>
+    <span class="s1">margin: </span><span class="s2">20</span><span class="s1">px </span><span class="s2">0 0 20</span><span class="s1">px;</span>
+    <span class="s1">display: flex;</span>
+    <span class="s1">flex-direction: column;</span>
+    <span class="s1">font-size: </span><span class="s2">0</span><span class="s1">.</span><span class="s2">875</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">.bookTitle {</span>
+    <span class="s1">font-weight: bold;</span>
+<span class="s1">}</span>
+
+<span class="s1">.bookDetail {</span>
+    <span class="s1">margin-top: </span><span class="s2">4</span><span class="s1">px;</span>
+    <span class="s1">font-size: </span><span class="s2">0</span><span class="s1">.</span><span class="s2">875</span><span class="s1">em;</span>
+<span class="s1">}</span>
+
+<span class="s1">.bookPrice {</span>
+    <span class="s1">margin-top: </span><span class="s2">4</span><span class="s1">px;</span>
+    <span class="s1">font-weight: bold;</span>
+<span class="s1">}</span>
+
+<span class="s1">.actionButton {</span>
+    <span class="s1">height: </span><span class="s2">20</span><span class="s1">px;</span>
+    <span class="s1">width: </span><span class="s2">70</span><span class="s1">px;</span>
+    <span class="s1">border-radius: </span><span class="s2">8</span><span class="s1">px;</span>
+    <span class="s1">margin-top: </span><span class="s2">4</span><span class="s1">px;</span>
+    <span class="s1">line-height: </span><span class="s2">20</span><span class="s1">px;</span>
+    <span class="s1">text-align: center;</span>
+    <span class="s1">background-color: #dd1d5e;</span>
+    <span class="s1">color: white;</span>
+    <span class="s1">font-size: </span><span class="s2">0</span><span class="s1">.</span><span class="s2">875</span><span class="s1">em;</span>
+    <span class="s1">text-decoration: none;</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
